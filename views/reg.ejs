@@ -1,0 +1,102 @@
+<nav
+  class="d-flex navbar navbar-expand-lg navbar-dark fixed-top"
+  style="background-color: #0039a5"
+>
+  <div class="container pt-1">
+    <div class="">
+      <a class="navbar-brand tixbrand" href="#">e-generator</a>
+      <form class="d-flex">
+        <input
+          class="form-control d-none me-2"
+          type="search"
+          placeholder="Search for events, artists or venue"
+          aria-label="Search"
+        />
+        <button class="btn btn-secondary d-none" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="d-flex">
+      <div class="pt-1 mx-1">
+        <a href="/user/login" style="color: white; text-decoration: none"
+          ><i class="bi bi-person-circle"> Login </i></a
+        >
+        <a href="" class="px-1 d-lg-none" style="color: white"
+          ><i class="bi bi-search"></i>
+        </a>
+      </div>
+
+      <button
+        class="navbar-toggler nav-tgl"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<section class="py-5">
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Register
+        </h1>
+        <%- include ('./partials/messages.ejs') %>
+        <form action="/user/register" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter Name"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Create Password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="Confirm Password"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 col-12">
+            Register
+          </button>
+        </form>
+        <p class="lead mt-4">
+          Have An Account? <a href="/user/login">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

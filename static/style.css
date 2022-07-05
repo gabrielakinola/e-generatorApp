@@ -1,0 +1,71 @@
+.tixbrand {
+  font-family: "Nunito Sans", sans-serif;
+  font-stretch: expanded;
+  font-style: italic;
+  font-weight: bolder;
+}
+.nav-link {
+  /*font-family: "Nunito Sans", sans-serif;*/
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+.my-acct {
+  font-size: small;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+::placeholder {
+  color: white;
+  font-weight: 200;
+}
+.tixholder {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+}
+.navbar-toggler {
+  /* padding: 0.25rem 0.75rem; */
+  border-color: #0039a5;
+  padding: 0.25rem;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  /* border: 1px solid transparent; */
+  /* border-radius: 0.25rem
+rem
+; */
+  /* transition: box-shadow .15s ease-in-out; */
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 2em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.upcmhr {
+  opacity: inherit;
+}
+
+.row {
+  --bs-gutter-x: 0.8rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 47%;
+  font-style: italic;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
+#ticketmaster {
+  font-family: "Nunito", sans-serif;
+}
