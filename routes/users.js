@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/Userdb");
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
+const { ensureAuthenticated } = require("../config_file/auth");
 
 const router = express.Router();
 
@@ -11,6 +12,12 @@ router.get("/login", (req, res) => {
 
 router.get("/register", (req, res) => {
   res.render("reg");
+});
+router.get("/ticketmaster", ensureAuthenticated, (req, res) => {
+  res.render("tm");
+});
+router.get("/ticketmaster/tickets", ensureAuthenticated, (req, res) => {
+  res.render("tmtix");
 });
 
 router.post("/register", (req, res) => {

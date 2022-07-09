@@ -20,14 +20,14 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
-app.use(express.static(path.join(__dirname, "static")));
-
 //set view engine
 app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("layout", "layouts");
 
 port = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, "static")));
 
 //Body-Parser
 app.use(express.urlencoded({ extended: false }));
